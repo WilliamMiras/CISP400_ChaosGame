@@ -47,12 +47,16 @@ int main()
             {
                 if(event.mouseButton.button == sf::Mouse::Left)
                 {
-                    cout << "The left button was pressed" << endl;
-                    cout << "Mouse x: " << event.mouseButton.x << endl;
-                    cout << "Mouse y: " << event.mouseButton.y << endl;
+                    for(int i = 0; i < 3; i++)
+                    {
+                        clicked.x = event.mouseButton.x;
+                        clicked.y = event.mouseButton.y;
+                        points.push_back(clicked);
+                        rect.setPosition(clicked.x, clicked.y);
+                        rect.setFillColor(Color::White);
+                    }
                     
-                    clicked.x = event.mouseButton.x;
-                    clicked.y = event.mouseButton.y;
+
                 }
             }
 
@@ -103,8 +107,9 @@ int main()
 
             //loop through vectors and draw each coordinate
             //Clear everything from the last run frame
-            window.clear();
+            //window.clear();
             //Draw our game scene here
+
             window.draw(messageText);
             window.draw(rect);
             window.display();
