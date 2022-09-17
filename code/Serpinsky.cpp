@@ -1,3 +1,13 @@
+/*
+ *************************
+   
+   WILLIAM M. & TYLER B.
+        
+       CHAOS GAME!!!
+    
+ *************************
+*/
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -84,8 +94,9 @@ int main()
 
         messageText.setFont(font);
 
-        messageText.setString("Click the mouse 3 times anywhere to set 3 points "
+        messageText.setString("             Click the mouse 3 times anywhere to set 3 points "
             "for a triangle, the 4th click starts the game!\n"
+            "                                                               "
             "Press escape to exit the game, or close out the game.");
 
         messageText.setCharacterSize(25);
@@ -133,8 +144,11 @@ int main()
 
         for (int i = 0; i < points.size(); i++)
         {
-            rect.setPosition(points.at(i).x, points.at(i).y);
-            window.draw(rect);
+            if (points.size() > 0)
+            {
+                rect.setPosition(points.at(i).x, points.at(i).y);
+                window.draw(rect);
+            }
 
         }
 
