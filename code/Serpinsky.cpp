@@ -78,15 +78,17 @@ int main()
         Text messageText;
         Font font;
 
-        font.loadFromFile("fonts/KOMIKAP_.ttf");
+        //font.loadFromFile("fonts/KOMIKAP_.ttf");
+        font.loadFromFile("fonts/OldSchoolAdventures-42j9.ttf");
+        //font.loadFromFile("fonts/Minecraft.ttf");
 
         messageText.setFont(font);
 
-        messageText.setString("Click the mouse 3 times anywhere to set 3 points\n"
+        messageText.setString("Click the mouse 3 times anywhere to set 3 points "
             "for a triangle, the 4th click starts the game!\n"
             "Press escape to exit the game, or close out the game.");
 
-        messageText.setCharacterSize(20);
+        messageText.setCharacterSize(25);
         messageText.setFillColor(Color::White);
         messageText.setPosition(10, 10);
 
